@@ -2,7 +2,7 @@ package rvt;
 
 import java.util.*;
 
-public class Division{
+public class DivisionPractise{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numerator = 0, divisor = 0;
@@ -19,6 +19,7 @@ public class Division{
             } catch (InputMismatchException ex) {
                 System.out.println("You entered bad data.");
                 System.out.println("Please try again.");
+                scanner.nextLine();
             }
         }
 
