@@ -2,7 +2,8 @@ package rvt;
 
 import java.util.*;
 
-public class DivisionPractise{
+public class Chapter100{
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numerator = 0, divisor = 0;
@@ -22,6 +23,5 @@ public class DivisionPractise{
                 scanner.nextLine();
             }
         }
-
     }
 }
