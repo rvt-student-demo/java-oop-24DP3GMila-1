@@ -2,8 +2,37 @@ package rvt;
 
 import java.util.ArrayList;
 
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.nio.file.Files;
+
 public class ToDoList {
     ArrayList<String> taskList = new ArrayList<String>();
+    private final String filePath = "data/todo.csv";
+
+    public ToDoList() {
+        this.taskList = new ArrayList<>();
+        loadFromFile();
+    }
+
+    private void loadFromFile() {
+        Path path = Paths.get(filePath);
+        if (!Files.exists()) {
+            return;
+        }
+        try (BufferedReader br = Files.newBufferedReader(path)) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                line = line.trim();
+                if (line.isEmpty()) continue;
+                taskList.add(line);
+            }
+        } catch (Exception e) {
+            System.out.println("Error loading tasks from file: " + e.getMessage());
+        }
+    }
 
     public void add(String task) {
         taskList.add(task);
