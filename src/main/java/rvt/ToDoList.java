@@ -15,11 +15,12 @@ public class ToDoList {
     public ToDoList() {
         this.taskList = new ArrayList<>();
         loadFromFile();
+        getLastId();
     }
 
     private void loadFromFile() {
         Path path = Paths.get(filePath);
-        if (!Files.exists()) {
+        if (!Files.exists(path)) {
             return;
         }
         try (BufferedReader br = Files.newBufferedReader(path)) {
@@ -47,5 +48,21 @@ public class ToDoList {
 
     public void remove(int taskIndex) {
         taskList.remove(taskIndex-1);
+    }
+
+    public int getLastId() {
+        if (taskList.isEmpty()) {
+            return 0;
+        }
+        String last = taskList.get(taskList.size() - 1);
+        String[] parts = last.split(",", 2);
+        if (parts.length == 0) {
+            return 0;
+        }
+        try {
+            return Integer.parseInt(parts[0].trim());
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
 }
