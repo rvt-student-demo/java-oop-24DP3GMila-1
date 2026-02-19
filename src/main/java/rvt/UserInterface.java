@@ -15,18 +15,28 @@ public class UserInterface {
         while (true) {
             System.out.print("Command: ");
             String command = scanner.nextLine();
-            if (command.equals("stop")) { // if command == "stop"
-                break;
-            } else if (command.equals("add")) { // if command == "add"
-                System.out.print("To add: ");
-                String task = scanner.nextLine();
-                list.add(task);
-            } else if (command.equals("list")) { // if command == "list"
-                list.print();
-            } else if (command.equals("remove")) { // if command == "remove"
-                System.out.print("Which one is removed? ");
-                int id = Integer.valueOf(scanner.nextLine());
-                list.remove(id);
+
+            switch (command) {
+                case "stop":
+                    return;
+                case "add":
+                    System.out.print("To add: ");
+                    list.add(scanner.nextLine());
+                    break;
+                case "list":
+                    list.print();
+                    break;
+                case "remove":
+                    System.out.print("Which one is removed? ");
+                    try {
+                        int id = Integer.parseInt(scanner.nextLine());
+                        list.remove(id);
+                    } catch (Exception e) {
+                        System.out.println("Invalid number.");
+                    }
+                    break;
+                default:
+                    System.out.println("Unknown command");
             }
         }
     }

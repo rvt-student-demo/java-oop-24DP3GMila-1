@@ -7,15 +7,10 @@ import java.io.FileNotFoundException;
 
 public class App {
     public static void main(String[] args) {
-        File file = new File("data/todo.csv");
-        try {
-            Scanner reader = new Scanner(file);
-            System.out.println(reader.nextLine());
-            while (reader.hasNextLine()) {
-                System.out.println(reader.nextLine());
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        ToDoList list = new ToDoList();
+        Scanner scanner = new Scanner(System.in);
+        UserInterface ui = new UserInterface(list, scanner);
+        ui.start();
+        System.out.println("Last id: " + list.getLastId());
     }
 }
