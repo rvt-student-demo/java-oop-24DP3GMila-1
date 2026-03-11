@@ -1,5 +1,7 @@
 package rvt.registration;
 
+import java.util.*;
+
 public class Student {
     private String name;
     private String surname;
@@ -8,5 +10,10 @@ public class Student {
     private String regitrationData;
     private String registrationTime;
 
+    public void Vards(String name){
+        this.name = name;
+        Scanner scanner = new Scanner(System.in);
+        
+    }
     
 }
