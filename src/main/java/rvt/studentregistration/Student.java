@@ -26,7 +26,7 @@ public class Student {
         this.surname = surname;
     }
 
-    public String geteMail() {
+    public String getEmail() {
         return email;
     }
 

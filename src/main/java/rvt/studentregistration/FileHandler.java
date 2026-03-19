@@ -20,11 +20,30 @@ public class FileHandler {
     }
 
     public void showContent() {
-
+        try(BufferedReader reader = new BufferedReader(new FileReader(studentsFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            
+        } catch (Exception e) {
+            System.out.println("Error reading the file: " + e.getMessage());
+        }
     }
 
     public void updateRow() {
-
+        try(BufferedReader reader = new BufferedReader(new FileReader(studentsFile));
+            PrintWriter writer = new PrintWriter(new FileWriter(studentsFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // Process the line and update it as needed
+                String updatedLine = line; // Modify this line as necessary
+                writer.println(updatedLine);
+            }
+            
+        } catch (Exception e) {
+            System.out.println("Error updating the file: " + e.getMessage());
+        }
     }
 
     public boolean deleteRow(String personalIdentificationNumber) {
