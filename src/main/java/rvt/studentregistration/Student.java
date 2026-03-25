@@ -1,6 +1,7 @@
 package rvt.studentregistration;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Student {
@@ -47,8 +48,16 @@ public class Student {
     }
 
     public void setRegitrationData() {
-        this.registrationDate = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String formattedDateTime = now.format(formatter);
+        this.registrationDate = LocalDateTime.parse(formattedDateTime, formatter);
     }
+
+    public void setRegitrationData(LocalDateTime localDt) {        
+        this.registrationDate = localDt;
+    }
+
     @Override
     public String toString() {
         return name + ','  + surname + ',' + email + ',' + personalIdentificationNumber + ',' + registrationDate;
