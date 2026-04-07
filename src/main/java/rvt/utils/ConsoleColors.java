@@ -10,7 +10,7 @@ public enum ConsoleColors {
     MAGENTA("\u001B[35m"),
     CYAN("\u001B[36m");
 
-    final String code;
+    public final String code;
     ConsoleColors(String code) {
         this.code = code;
     }
