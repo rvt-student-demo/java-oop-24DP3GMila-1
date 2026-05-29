@@ -17,4 +17,5 @@ public class Regex {
     public static boolean checkPersonalIdentificationNumber(String personalIdentificationNumber) {
         return personalIdentificationNumber.matches("^[0-9]{6}-[0-9]{5}$");
     }
+    
 }
