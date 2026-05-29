@@ -85,7 +85,6 @@ public class UserInterface {
         }
     }
 
-
     private void handleDelete(){
         
         System.out.print("Enter personal ID to delete: ");
