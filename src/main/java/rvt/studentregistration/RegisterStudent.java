@@ -36,4 +36,5 @@ public class RegisterStudent {
 
         return fileHandler.addRow(student.toString());
     }
+    
 }
