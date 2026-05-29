@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course id="DP2-3">
+        <title>Introduction to Programming</title>
+        <description>This course covers the fundamentals of programming, algorithm development, and basic data structures.</description>
+        <instructor>Jonh Doe</instructor>
+        <duration_hours>40</duration_hours>
+        <student_count>25</student_count>
+        <level>Beginner</level>
+    </course>
+
+    <course id="DP3-3">
+        <title>Database Techonlogies (SQL)</title>
+        <description>Theoretical and practical lessons on relations databases, SQL queries, and data modeling.</description>
+        <instructor>Jane Smith</instructor>
+        <duration_hours>56</duration_hours>
+        <student_count>18</student_count>
+        <level>Intermediate</level>
+    </course>
+
+    <course id="DP4-3">
+        <title>Cloud Computing and DevOps</title>
+        <description>An advanced course focusing on CI/CD pipelines, conntainerization, and cloud infrastructure managment.</description>
+        <instructor>Alex Taylor</instructor>
+        <duration_hours>72</duration_hours>
+        <student_count>12</student_count>
+        <level>Advanced</level>
+    </course>
+</courses>
