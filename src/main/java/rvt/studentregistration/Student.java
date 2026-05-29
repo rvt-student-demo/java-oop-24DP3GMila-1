@@ -62,4 +62,5 @@ public class Student {
     public String toString() {
         return name + ','  + surname + ',' + email + ',' + personalIdentificationNumber + ',' + registrationDate;
     }
+    
 }
