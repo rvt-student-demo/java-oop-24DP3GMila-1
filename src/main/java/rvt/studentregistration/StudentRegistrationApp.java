@@ -8,4 +8,5 @@ public class StudentRegistrationApp {
         UserInterface ui = new UserInterface(scanner);
         ui.start();
     }
+    
 }
