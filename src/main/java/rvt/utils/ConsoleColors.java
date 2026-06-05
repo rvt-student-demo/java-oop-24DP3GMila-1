@@ -13,5 +13,6 @@ public enum ConsoleColors {
     public final String code;
     ConsoleColors(String code) {
         this.code = code;
+        
     }
 }
