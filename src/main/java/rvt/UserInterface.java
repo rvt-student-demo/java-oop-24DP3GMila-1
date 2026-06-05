@@ -37,6 +37,7 @@ public class UserInterface {
                     break;
                 default:
                     System.out.println("Unknown command");
+                    
             }
         }
     }
