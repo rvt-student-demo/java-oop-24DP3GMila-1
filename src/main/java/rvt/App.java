@@ -12,5 +12,6 @@ public class App {
         UserInterface ui = new UserInterface(list, scanner);
         ui.start();
         System.out.println("Last id: " + list.getLastId());
+        
     }
 }
